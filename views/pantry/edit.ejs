@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Ingredient</title>
+</head>
+<body>
+    <h1>Ingredient Edit Page</h1>
+    <form action='/pantry/<%=ingredient.id%>?_method=PUT' method='POST'>
+        <label for="name">Name:</label>
+        <input type='text' name='name' value="<%=ingredient.name%>">
+        <label for='cost'>Price:</label>
+        <input type='text' name='cost' value='<%=ingredient.cost%>'>
+        <label for='amount'>Amount:</label>
+        <input type='text' name='amount' value='<%=ingredient.amount%>'>
+        <input type='submit' value='Submit'>
+    </form>
+    <button><a href='/pantry'>Back</a></button>
+</body>
+</html>
