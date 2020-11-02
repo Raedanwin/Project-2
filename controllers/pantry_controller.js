@@ -24,3 +24,29 @@ router.post(`/`, (req, res) => {
         res.redirect(`/pantry`)
     })
 })
+
+// seed
+router.get(`/seed`, (req, res) => {
+    Ingredient.create(
+        [
+            {
+                name: `apple`,
+                cost: .25,
+                amount: 8
+            },
+            {
+                name: `chicken`,
+                cost: 5.00,
+                amount: 7
+            },
+            {
+                name: `pasta`,
+                cost: 3.00,
+                amount: 150
+            }
+        ],
+        (error, data) => {
+            res.redirect(`/pantry`)
+        }
+    )
+})
