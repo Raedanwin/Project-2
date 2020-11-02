@@ -17,3 +17,10 @@ router.get(`/`, (req, res) => {
 router.get(`/new`, (req, res) => {
     res.render(`pantry/new.ejs`)
 })
+
+// create
+router.post(`/`, (req, res) => {
+    Ingredient.create(req.body, (error, createdIngredient) => {
+        res.redirect(`/pantry`)
+    })
+})
