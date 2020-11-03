@@ -24,3 +24,29 @@ router.post(`/`, (req, res) => {
         res.redirect(`/recipes`)
     })
 })
+
+// seed
+router.get(`/seed`, (req, res) => {
+    Recipe.create(
+        [
+           {
+               name: `Curry`,
+               calories: 500,
+               ingredients: [`chicken`, `curry powder`, `rice`]
+           },
+           {
+               name: `Spaghetti`,
+               calories: 600,
+               ingredients: [`pasta`, `sauce`, `ground beef`]
+           },
+           {
+               name: `Chicken`,
+               calories: 200,
+               ingredients: [`chicken`, `marinade`]
+           }
+        ],
+        (error, data) => {
+            res.redirect(`/recipes`)
+        }
+    )
+})
