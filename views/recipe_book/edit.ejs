@@ -10,10 +10,10 @@
     <form action='/recipes/<%=recipe.id%>?_method=PUT' method='POST'>
         <label for="name">Name:</label>
         <input type='text' name='name' value="<%=recipe.name%>">
-        <label for='cost'>Price:</label>
-        <input type='text' name='cost' value='<%=recipe.cost%>'>
-        <label for='amount'>Amount:</label>
-        <input type='text' name='amount' value='<%=recipe.amount%>'>
+        <label for='cost'>Calories:</label>
+        <input type='text' name='calories' value='<%=recipe.calories%>'>
+        <label for='amount'>Ingredients:</label>
+        <input type='text' name='ingredients' value='<%=recipe.ingredients%>'>
         <input type='submit' value='Submit'>
     </form>
     <button><a href='/recipes'>Back</a></button>

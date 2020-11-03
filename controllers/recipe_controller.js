@@ -32,17 +32,17 @@ router.get(`/seed`, (req, res) => {
            {
                name: `Curry`,
                calories: 500,
-               ingredients: [`chicken`, `curry powder`, `rice`]
+               ingredients: [`chicken`, ` curry powder`, ` rice`]
            },
            {
                name: `Spaghetti`,
                calories: 600,
-               ingredients: [`pasta`, `sauce`, `ground beef`]
+               ingredients: [`pasta`, ` sauce`, ` ground beef`]
            },
            {
                name: `Chicken`,
                calories: 200,
-               ingredients: [`chicken`, `marinade`]
+               ingredients: [`chicken`, ` marinade`]
            }
         ],
         (error, data) => {

@@ -14,6 +14,7 @@ const mongodbURI = process.env.MONGODBURI
 // MIDDLEWARE
 app.use(methodOverride('_method'))
 app.use(express.urlencoded({ extended: true }))
+app.use(express.static('public'));
 
 // DATABASE
 mongoose.connect(
