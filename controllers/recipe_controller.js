@@ -59,3 +59,15 @@ router.get(`/:id/edit`, (req, res) => {
         })
     })
 })
+
+// put
+router.put(`/:id`, (req, res) => {
+    Recipe.findByIdAndUpdate(
+        req.params.id,
+        req.body,
+        { new: true },
+        (error, updatedRecipe) => {
+            res.redirect(`/recipes`)
+        }
+    )
+})
