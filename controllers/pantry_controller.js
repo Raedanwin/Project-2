@@ -90,7 +90,7 @@ router.delete(`/:id`, (req, res) => {
 
 
 // drop
-// router.get(`/dropdatabase/doit`, (req, res) => {
+// router.get(`/dropdatabase/pantry`, (req, res) => {
 //     Ingredients.collection.drop()
 //     res.send(`Database has been dropped.`)
 // })

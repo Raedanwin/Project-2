@@ -42,12 +42,19 @@ db.on('disconnected', () => console.log('mongo disconnected'))
 // Controllers
 const pantryController = require('./controllers/pantry_controller.js')
 
+const recipeController = require(`./controllers/recipe_controller.js`)
+
 
 // Routes
 app.get('/', (req, res) => {
   res.redirect('/pantry')
 })
 app.use('/pantry', pantryController)
+
+app.get(`/`, (req, res) => {
+  res.redirect(`/recipes`)
+})
+app.use(`/recipes`, recipeController)
 
 // Listener
 app.listen(PORT, () => {
