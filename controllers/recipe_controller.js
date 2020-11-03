@@ -80,3 +80,10 @@ router.get(`/:id`, (req, res) => {
         })
     })
 })
+
+// delete
+router.delete(`/:id`, (req, res) => {
+    Recipe.findByIdAndRemove(req.params.id, (error, deletedRecipe) => {
+        res.redirect(`/recipes`)
+    })
+})
