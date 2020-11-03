@@ -50,3 +50,12 @@ router.get(`/seed`, (req, res) => {
         }
     )
 })
+
+// edit
+router.get(`/:id/edit`, (req, res) => {
+    Recipe.findById(req.params.id, (error, foundRecipe) => {
+        res.render(`recipe_book/edit.ejs`, {
+            recipe: foundRecipe
+        })
+    })
+})
