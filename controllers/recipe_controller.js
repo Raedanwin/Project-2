@@ -12,3 +12,15 @@ router.get(`/`, (req, res) => {
         })
     })
 })
+
+// new
+router.get(`/new`, (req, res) => {
+    res.render(`recipe_book/new.ejs`)
+})
+
+// create
+router.post(`/`, (req, res) => {
+    Recipe.create(req.body, (error, createdRecipe) => {
+        res.redirect(`/recipes`)
+    })
+})
