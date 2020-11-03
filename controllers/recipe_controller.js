@@ -71,3 +71,12 @@ router.put(`/:id`, (req, res) => {
         }
     )
 })
+
+// show
+router.get(`/:id`, (req, res) => {
+    Recipe.findById(req.params.id, (error, foundRecipe) => {
+        res.render(`recipe_book/show.ejs`, {
+            recipe: foundRecipe
+        })
+    })
+})
