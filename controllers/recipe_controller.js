@@ -87,3 +87,11 @@ router.delete(`/:id`, (req, res) => {
         res.redirect(`/recipes`)
     })
 })
+
+// drop
+// router.get(`/dropdatabase/recipe`, (req, res) => {
+//     Recipe.collection.drop()
+//     res.send(`Database has been dropped.`)
+// })
+
+module.exports = router
