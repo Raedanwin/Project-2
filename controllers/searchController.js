@@ -14,7 +14,7 @@ router.post(`/`, (req, res) => {
   
     function getSearch(){
       let route = "https://api.spoonacular.com/recipes/complexSearch?query="+search+"&apiKey="+SECRET+""
-      fetch(route).then(response =>{return response.json()}).then(data=>{res.render(`../views/search/resultPage.ejs`,{result:data.results})}).catch(err=>{console.log(err)})
+      fetch(route).then(response =>{return response.json()}).then(data=>{res.render(`../views/search/resultPage.ejs`,{result:data.results, SECRET: SECRET})}).catch(err=>{console.log(err)})
 }
   getSearch()
 })

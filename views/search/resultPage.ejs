@@ -10,7 +10,7 @@
     <h1>Dishes: </h1>
     <ul>
         <% for(let i = 0; i < result.length; i++) { %>
-            <li><%= result[i].title %></li>
+            <li><a href='https://api.spoonacular.com/recipes/visualizeRecipe?title=<%=result[i].title%>&apiKey=<%=SECRET%>?_method=POST' ><%= result[i].title %></a> </li>
         <% } %>
     </ul>
 </body>
