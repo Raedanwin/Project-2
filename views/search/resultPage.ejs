@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+    <%- include ('../partials/header.ejs') %>
+</head>
+<body>
+    <h1>Dishes: </h1>
+    <ul>
+        <% for(let i = 0; i < result.length; i++) { %>
+            <li><%= result[i].title</li>
+        <% } %>
+    </ul>
+</body>
+</html>
