@@ -14,7 +14,7 @@ Link to Live Site:
   https://polar-oasis-16482.herokuapp.com/pantry
   
 Unsolved Problems: 
-  None that I know of, but things were left out in the interest of time.
+  CSS won't show up on every page, despite being linked.
 
 Technical Challenges: 
   1. By far my biggest technical challenge was figuring out how to use and implement the API.
