@@ -10,11 +10,13 @@
     <h1>Recipe Edit Page</h1>
     <form action='/recipes/<%=recipe.id%>?_method=PUT' method='POST'>
         <label for="name">Name:</label>
-        <input type='text' name='name' value="<%=recipe.name%>">
+        <input type='text' name='name' value="<%= recipe.name %>">
         <label for='cost'>Calories:</label>
-        <input type='text' name='calories' value='<%=recipe.calories%>'>
+        <input type='text' name='calories' value='<%= recipe.calories %>'>
         <label for='amount'>Ingredients:</label>
-        <input type='text' name='ingredients' value='<%=recipe.ingredients%>'>
+        <input type='text' name='ingredients' value='<%= recipe.ingredients %>'>
+        <label for='image'>Image</label>
+        <input type='text' name='image' value='<%= recipe.image %>'>
         <input type='submit' value='Submit'>
     </form>
     <button><a href='/recipes'>Back</a></button>

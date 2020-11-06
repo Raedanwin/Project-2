@@ -14,17 +14,18 @@ router.post(`/`, (req, res) => {
     let search = req.body.search
   
     function getSearch(){
-      let route = "https://api.spoonacular.com/recipes/complexSearch?query="+search+"&apiKey="+SECRET+""
-      fetch(route).then(response =>{return response.json()}).then(data=>{res.render(`../views/search/resultPage.ejs`,{result:data.results, SECRET: SECRET})}).catch(err=>{console.log(err)})
+      let route = 'https://api.spoonacular.com/recipes/complexSearch?query='+search+'&apiKey='+SECRET+''
+      fetch(route).then(response => {return response.json()}).then(data => {res.render(`../views/search/resultPage.ejs`,{result: data.results, SECRET: SECRET})}).catch(err => {console.log(err)})
 }
   getSearch()
 })
-router.get(`/modifiedSearch/:id`,(req,res)=>{
-    let id= req.params.id
-    console.log(id)
+
+router.get(`/modifiedSearch/:id`, (req,res)=>{
+    let id = req.params.id
+    
     function getRecipe(){
       let route = 'https://api.spoonacular.com/recipes/'+id+'/information?includeNutrition=false&apiKey='+SECRET+''
-      fetch(route).then(response =>{return response.json()}).then(data=>{res.render(`../views/recipe_book/show.ejs`,{recipe:data, SECRET: SECRET})}).catch(err=>{console.log(err)})
+      fetch(route).then(response => {return response.json()}).then(data => {res.render(`../views/recipe_book/searchedRecipe.ejs`,{recipe:data, SECRET: SECRET})}).catch(err => {console.log(err)})
     }
     getRecipe()
 })

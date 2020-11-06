@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Show</title>
+    <%- include ('../partials/header.ejs') %>
+</head>
+<body>
+    <h1>Recipe Information</h1>
+    <h3>Name: <%= recipe.title %> </h3>
+    <h3>Ingredients: 
+        <ul>
+            <% for(let i = 0; i < recipe.extendedIngredients.length; i++) { %> 
+                <li><%= recipe.extendedIngredients[i].originalString %></li>
+            <% } %>
+        </ul>
+    </h3>
+    <img src='<%= recipe.image %>'>
+    <h3>Instructions: <%= recipe.instructions %></h3>
+</body>
+</html>
