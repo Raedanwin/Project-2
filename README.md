@@ -23,3 +23,8 @@ Improvements I Would Make:
   1. I would add more to the recipe and ingredient show pages to give more depth to the information the user recieves.
   2. I would make the search process/results more interactive to give the user more control over exactly what's happening.
   3. I would add more style and make it easier on the eyes/easier to navigate and understand.
+
+Sources: 
+  1. Styles: Skeleton: http://getskeleton.com/ , Normalize: https://necolas.github.io/normalize.css/
+  2. API: https://spoonacular.com/food-api
+  3. Fetch: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch , https://www.javascripttutorial.net/javascript-fetch-api/
