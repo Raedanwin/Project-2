@@ -7,7 +7,7 @@ Approach Taken:
   3. I then made the routes and did the same for my recipe book.
   4. I made a partials file and added my styles and constant links to everything I needed in that.
   5. Then I tried to implement the API to get the real functionality of the app in place.
-  6. I got the search function working and was able to find and save recipes into my recipe book database.
+  6. I got the search function working and was able to search for any recipe I wanted.
   7. And lastly, I pushed everything to Heroku and got it working there.
   
 Link to Live Site: 
