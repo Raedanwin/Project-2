@@ -8,16 +8,14 @@
 </head>
 <body>
     <h1>Recipe Information</h1>
-    <h3>Name: <%= recipe.name %> </h3>
-    <h3>Calories: <%= recipe.calories %> </h3>
-    <h3>Ingredients: <%= recipe.ingredients %>. </h3>
-    <button><a href="/recipes/<%=recipe.id%>/edit">Edit</a></button>
-    <br>
-    <br>
-    <form action='/recipes/<%=recipe.id%>?_method=DELETE' method='POST'>
-        <input type='submit' value='Delete'>
-    </form>
-    <br>
-    <button><a href='/recipes'>Back</a></button>
+    <h3>Name: <%= recipe.title %> </h3>
+    <h3>Ingredients: 
+        <ul>
+            <% for(let i = 0; i < recipe.extendedIngredients.length; i++) { %> 
+                <li><%= recipe.extendedIngredients[i].originalString %></li>
+            <% } %>
+        </ul>
+    </h3>
+    <h3>Instructions: <%= recipe.instructions %></h3>
 </body>
 </html>
