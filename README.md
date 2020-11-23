@@ -1,4 +1,4 @@
-Technologies Used: <br>
+Technologies Used: 
   I used EJS and CSS for my front-end and Express, MongoDB and Mongoose for my back-end.
 
 Approach Taken: 
